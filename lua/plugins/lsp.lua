@@ -66,11 +66,11 @@ return {
       -- See `:help lsp-config` for available options.
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        -- clangd = {},
+        clangd = {},
+        pyright = {},
+        ts_ls = {},
         -- gopls = {},
-        -- pyright = {},
         -- rust_analyzer = {},
-        -- ts_ls = {},
 
         stylua = {},
 
@@ -101,7 +101,11 @@ return {
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {})
+      vim.list_extend(ensure_installed, {
+        'ruff',         -- formatter + linter Python
+        'prettierd',    -- formatter JS/TS
+        'clang-format', -- formatter C/C++
+      })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
