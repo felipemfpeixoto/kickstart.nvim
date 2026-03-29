@@ -23,3 +23,12 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select all in a file' })
+
+-- Delete sem poluir clipboard (usa black-hole register)
+vim.keymap.set('n', 'd', '"_d', { noremap = true, silent = true })
+vim.keymap.set('n', 'dd', '"_dd', { noremap = true, silent = true })
+vim.keymap.set('n', 'D', '"_D', { noremap = true, silent = true })
+vim.keymap.set('x', 'd', '"_d', { noremap = true, silent = true })
+vim.keymap.set('n', 'c', '"_c', { noremap = true, silent = true })
