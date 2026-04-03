@@ -31,3 +31,7 @@ vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+
+vim.o.tabstop = 4      -- largura visual do caractere tab
+vim.o.shiftwidth = 4   -- indentação com >> / << e autoindent
+vim.o.expandtab = true -- converte tab em espaços
