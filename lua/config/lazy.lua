@@ -10,13 +10,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   { import = 'plugins' },
-
-  -- Optional kickstart plugins — uncomment to enable:
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
