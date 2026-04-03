@@ -28,3 +28,9 @@ vim.keymap.set('n', 'dd', '"_dd', { noremap = true, silent = true })
 vim.keymap.set('n', 'D', '"_D', { noremap = true, silent = true })
 vim.keymap.set('x', 'd', '"_d', { noremap = true, silent = true })
 vim.keymap.set('n', 'c', '"_c', { noremap = true, silent = true })
+
+-- Buffer navigation
+vim.keymap.set('n', ']b', '<cmd>bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '[b', '<cmd>bprev<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>', { desc = '[B]uffer [D]elete' })
+vim.keymap.set('n', '<leader>bD', '<cmd>%bdelete|edit#|bdelete#<CR>', { desc = '[B]uffer [D]elete all others' })
